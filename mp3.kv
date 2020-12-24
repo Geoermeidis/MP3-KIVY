@@ -1,0 +1,33 @@
+<Button>:
+    font_size: 20
+    size_hint: 0.34,0.2
+    background_color: 0.7,0.5,1,1
+
+<Main>:
+
+    music_button:music_button
+    next_button:next_button
+    previous_button:previous_button
+    shuffle_button:shuffle_button
+
+    ToggleButton:
+        id: music_button
+        pos_hint: {"x":0.34,"y":0}
+        size_hint: 0.34,0.2
+        on_press: root.play_song()
+
+    Button:
+        id:next_button
+        pos_hint:{"x": 0.68,"y": 0}
+        on_press: root.next_song()
+
+    Button:
+        id:previous_button
+        pos_hint:{"x": 0,"y": 0}
+        on_press: root.previous_song()
+
+    ToggleButton:
+        id:shuffle_button
+        pos_hint: {"x":0.6,"y":0.6}
+        size_hint: 0.34, 0.05
+        on_press: root.shuffle()
